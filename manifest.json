@@ -1,0 +1,21 @@
+{
+  "name" : "Let Me Moogle That For You",
+  "version" : "1.0",
+  "manifest_version": 2,
+  "description" : "Kupo!",
+  "permissions": [
+    "https://www.google.com/*",
+    "http://www.google.com/"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "https://www.google.com/*",
+        "http://www.google.com/"
+      ],
+      "js" : ["contentscript.js"],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ]
+}
